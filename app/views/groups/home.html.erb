@@ -1,0 +1,17 @@
+<h1>Home page</h1>
+
+<%= button_to 'sign out', destroy_user_session_path, method: :delete %>
+<h2>List of categories</h2>
+
+<%= link_to 'add a new category', new_user_group_path(current_user) %>
+<br>
+<br>
+<% @categories.each do |category| %>
+ <%= image_tag "/images/icons/16x16/add.png", alt: 'icon'%> 
+	<%= link_to category.name, user_group_path(current_user, category)%>
+	<span> $</span><%= category.purchases.sum { |item| item.entity.amount } %>
+	<%= button_to 'delete', user_group_path(current_user, category), method: :delete %>
+	<br>
+<% end %>
+<br>
+
