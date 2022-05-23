@@ -5,5 +5,9 @@
 
 <% @categories.each do |category| %>
 	<%= category.name %>
+	<%= category.purchases.sum { |item| item.entity.amount } %>
+	
 	<br>
 <% end %>
+<br>
+

@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
 	def home
-	@categories = Group.all
-	end
+	@categories = current_user.groups
+  end
 end
