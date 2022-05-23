@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     authenticated :user do
-      root 'users#home', as: :authenticated_root
+      root 'groups#home', as: :authenticated_root
     end
   
     unauthenticated do
@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     end
   end
 
-  # root "users#home"
-  #get 'home', to: 'users#home'
-  resources :users
+  resources :users do
+    resources :groups, only: [:home, :show, :new]
+  end
 end

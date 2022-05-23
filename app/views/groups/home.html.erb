@@ -1,0 +1,9 @@
+<h1>Home page</h1>
+
+<%= button_to 'sign out', destroy_user_session_path, method: :delete %>
+<h2>List of categories</h2>
+
+<% @categories.each do |category| %>
+	<%= category.name %>
+	<br>
+<% end %>

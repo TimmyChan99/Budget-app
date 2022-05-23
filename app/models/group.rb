@@ -1,4 +1,4 @@
 class Group < ApplicationRecord
   belongs_to :author, class_name: 'User'
-  belongs_to :entity, class_name: 'Entity'
+  has_many :entities, through: :group_entities, dependent: :delete_all
 end
