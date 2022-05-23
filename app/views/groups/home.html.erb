@@ -10,6 +10,7 @@
  <%= image_tag "/images/icons/16x16/add.png", alt: 'icon'%> 
 	<%= link_to category.name, user_group_path(current_user, category)%>
 	<span> $</span><%= category.purchases.sum { |item| item.entity.amount } %>
+	<%= button_to 'delete', user_group_path(current_user, category), method: :delete %>
 	<br>
 <% end %>
 <br>

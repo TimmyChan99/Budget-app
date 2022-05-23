@@ -23,6 +23,12 @@ class GroupsController < ApplicationController
 		end
 	end
 
+	def destroy
+		@category = Group.find(params[:id])
+		@category.destroy
+		redirect_to authenticated_root_path
+	end
+
 	private
 
 	def category_params
