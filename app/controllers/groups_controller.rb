@@ -3,7 +3,11 @@ class GroupsController < ApplicationController
     @categories = current_user.groups
   end
 
-  def show; end
+  def show
+    @category = Group.find(params[:id])
+    @purchases = Purchase.where(['group_id = :id', { id: params[:id].to_s}]).order(created_at: :desc)
+    @total = @category.purchases.sum { |item| item.entity.amount }
+  end
 
   def new
     @category = Group.new
@@ -33,4 +37,5 @@ class GroupsController < ApplicationController
     p[:author_id] = params[:user_id]
     p
   end
+
 end
