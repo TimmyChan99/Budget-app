@@ -1,18 +1,25 @@
-<h1>Home page</h1>
-
 <%= button_to 'sign out', destroy_user_session_path, method: :delete %>
-<h2>List of categories</h2>
 
-<%= link_to 'add a new category', new_user_group_path(current_user) %>
-<br>
-<br>
-<% @categories.each do |category| %>
- <%= image_tag category.icon, alt: 'icon'%> 
- <%#= category.icon %> 
-	<%= link_to category.name, user_group_path(current_user, category)%>
-	<span> $</span><%= category.purchases.sum { |item| item.entity.amount } %>
-	<%= button_to 'delete', user_group_path(current_user, category), method: :delete %>
-	<br>
-<% end %>
-<br>
 
+<div class='main'>
+	<h1 class='heading'>Categories</h1>
+	
+	<ul class='categories_list'>
+		<% @categories.each do |category| %>
+		 <li class='category'>
+			 <%= image_tag category.icon, alt: 'icon'%> 
+			 <div>
+				 <%= link_to category.name.capitalize, user_group_path(current_user, category)%>
+				 <p><span> $</span><%= category.purchases.sum { |item| item.entity.amount } %></p>
+			 </div>
+			 <%= button_to 'Delete', user_group_path(current_user, category), method: :delete %>
+		 </li>
+		<% end %>
+	</ul>
+	
+	
+	<div class="footer-button">
+		<%= link_to 'Add a new category', new_user_group_path(current_user) %>
+	</div>
+	
+</div>
