@@ -1,1 +1,13 @@
-<h1>category</h1>
+<h1><%= @category.name %>  total amount: $<%= @total %></h1>
+
+<% @purchases.each do |purchase| %>
+<p>
+	<%= purchase.entity.name %>
+	$ <%= purchase.entity.amount %>
+</p>
+	<br>
+<% end %>
+
+<%= link_to 'Add a new transaction', new_entity_path %>
+<br>
+<%= link_to 'Back', authenticated_root_path %>

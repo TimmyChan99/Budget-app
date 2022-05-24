@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   resources :users do
     resources :groups, only: [:home, :show, :new, :create, :destroy]
   end
+
+  resources :entities, only: [:new, :create]
 end
