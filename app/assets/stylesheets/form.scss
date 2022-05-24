@@ -47,3 +47,10 @@
 	}
 
 }
+
+.shared_links {
+  @include flex(center, center, column);
+
+  font-size: 15px;
+	font-weight: 600;	
+}
