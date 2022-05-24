@@ -2,8 +2,7 @@
 
 
 <div class='main'>
-	<h1 class='heading'>Categories</h1>
-	
+	<h1 class='heading'>Categories</h1>	
 	<ul class='categories_list'>
 		<% @categories.each do |category| %>
 		 <li class='category'>
@@ -16,10 +15,7 @@
 		 </li>
 		<% end %>
 	</ul>
-	
-	
 	<div class="footer-button">
 		<%= link_to 'Add a new category', new_user_group_path(current_user) %>
 	</div>
-	
 </div>
