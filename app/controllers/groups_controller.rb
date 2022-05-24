@@ -16,8 +16,8 @@ class GroupsController < ApplicationController
   def create
     @category = Group.new(category_params)
 
-    flash[:notice] = 'Categry created successfully'
     if @category.save
+      flash[:notice] = 'Categry created successfully'
       redirect_to authenticated_root_path
     else
       redirect_to new_user_group_path(current_user)
