@@ -1,39 +1,39 @@
 @import './page.scss';
 
 @mixin message($bg, $color) {
-	text-align: center;
-	background-color: $bg;
-	color: $color;
-	padding: 10px;
-	font-weight: 500;
+  text-align: center;
+  background-color: $bg;
+  color: $color;
+  padding: 10px;
+  font-weight: 500;
 }
 
 header {
-	@include bg-gradiant;
+  @include bg-gradiant;
   @include flex(center, flex-start, row);
-	
-	background: linear-gradient(180deg, rgba(45,97,155,1) 0%, rgba(50,108,174,1) 35%, rgba(55,120,194,1) 100%);
+
+  background: linear-gradient(180deg, rgba(45, 97, 155, 1) 0%, rgba(50, 108, 174, 1) 35%, rgba(55, 120, 194, 1) 100%);
   padding: 7px;
-	height: 30px;
-	color: $white;
+  height: 30px;
+  color: $white;
 
-	.back_btn {
-		color: $white;
-	}
+  .back_btn {
+    color: $white;
+  }
 
-	button {
-		color: $white;
-		background: none;
-		border: none;
-		font-size: 15px;
-		font-weight: 600;
-	}
+  button {
+    color: $white;
+    background: none;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+  }
 }
 
 .notice {
-	@include message(#d1e7dd, #0f5132)
+  @include message(#d1e7dd, #0f5132);
 }
 
 .alert {
-	@include message(#f8d7da, #842029)
+  @include message(#f8d7da, #842029);
 }

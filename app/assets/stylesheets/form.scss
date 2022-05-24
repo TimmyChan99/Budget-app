@@ -1,56 +1,54 @@
 @import './page.scss';
 
 .form {
-	@include flex(center, space-between, column);
+  @include flex(center, space-between, column);
 
-	margin: 7%;	
-	
+  margin: 7%;
+
   select,
-	.field {
-		width: 96vw;
-		height: 6vh;
-		padding: 4px;
-		border: none;
-		box-shadow: $shadow;
-		margin-top: 5px;
-	
-		&::placeholder {
-			color: $light-dark;
-			font-size: 15px;
-			font-weight: 600;
-		}
-	
-	}
+  .field {
+    width: 96vw;
+    height: 6vh;
+    padding: 4px;
+    border: none;
+    box-shadow: $shadow;
+    margin-top: 5px;
 
-	input[type=submit] {
-		border: none;
-		background: none;
-		font-size: 17px;
-		font-weight: 600;
-		margin-top: 5vh;
-		color: $light-dark;
-	}
+    &::placeholder {
+      color: $light-dark;
+      font-size: 15px;
+      font-weight: 600;
+    }
+  }
 
-	.field-container {
-		margin: 10px;
-	}
+  input[type=submit] {
+    border: none;
+    background: none;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 5vh;
+    color: $light-dark;
+  }
 
-	.label {
+  .field-container {
+    margin: 10px;
+  }
+
+  .label {
     color: $text-color;
-	}
+  }
 
-	select,
-	option {
-		color: $light-dark;
-			font-size: 15px;
-			font-weight: 600;
-	}
-
+  select,
+  option {
+    color: $light-dark;
+    font-size: 15px;
+    font-weight: 600;
+  }
 }
 
 .shared_links {
   @include flex(center, center, column);
 
   font-size: 15px;
-	font-weight: 600;	
+  font-weight: 600;
 }

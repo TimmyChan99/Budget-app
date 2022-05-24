@@ -5,127 +5,124 @@ $bg-color: #f1f1f1;
 $btn-color: #6fb524;
 $text-color: #434b54;
 $light-dark: #989da3;
-$shadow:  rgba(0, 0, 0, 0.16) 0px 1px 4px;
+$shadow:  rgba(0, 0, 0, 0.16) 0 1px 4px;
 
 @mixin flex($align, $justify, $direction) {
-	display: flex;
-	flex-direction: $direction;
-	align-items: $align;
-	justify-content: $justify;
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
 }
 
 @mixin bg-gradiant {
-	background: rgb(45,97,155);
-  background: linear-gradient(0deg, rgba(45,97,155,1) 0%, rgba(50,108,174,1) 35%, rgba(55,120,194,1) 100%);
+  background: rgb(45, 97, 155);
+  background: linear-gradient(0deg, rgba(45, 97, 155, 1) 0%, rgba(50, 108, 174, 1) 35%, rgba(55, 120, 194, 1) 100%);
 }
 
 * {
- font-family: $font-sans;
- padding: 0;
- margin: 0;
- box-sizing: 0;
+  font-family: $font-sans;
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
 }
 
 img {
-	width: 25%;
-	height: 90%;
+  width: 25%;
+  height: 90%;
 }
 
 a {
-	text-decoration: none;
-	color: $text-color;
+  text-decoration: none;
+  color: $text-color;
 }
 
 .main {
-	background-color: $bg-color;
-	height: 100vh;
-	color: $text-color;
+  background-color: $bg-color;
+  height: 100vh;
+  color: $text-color;
 }
 
 .heading {
-@include flex(center, center, row);
-@include bg-gradiant;
+  @include flex(center, center, row);
+  @include bg-gradiant;
 
-
-color: $white;
-font-size: 21px;
-font-weight: 100;
-text-transform: uppercase;
-height: 40px;
-padding: 5px;
-
+  color: $white;
+  font-size: 21px;
+  font-weight: 100;
+  text-transform: uppercase;
+  height: 40px;
+  padding: 5px;
 }
 
 .categories_list {
-	@include flex(center, center, column);
+  @include flex(center, center, column);
 }
 
 .category {
-	@include flex(center, space-around, row);
+  @include flex(center, space-around, row);
 
-	background-color: $white;
-	width: 85%;
-	min-height: 80px;
+  background-color: $white;
+  width: 85%;
+  min-height: 80px;
   margin: 10px;
   border-radius: 4px;
-	list-style: none;
-	padding: 10px;
-	box-shadow: $shadow;
+  list-style: none;
+  padding: 10px;
+  box-shadow: $shadow;
 
   p,
-	div {
-		@include flex(center, space-between, row);
+  div {
+    @include flex(center, space-between, row);
 
-		width: 37%;
-		font-size: 17px;
-		font-weight: 700;
-	}
+    width: 37%;
+    font-size: 17px;
+    font-weight: 700;
+  }
 
-	button {
-		background: none;
-		border: 1px solid $text-color;
-		padding: 6px 10px;
-		border-radius: 5px;
-		font-weight: 600;
-		color: $text-color;
-	}
+  button {
+    background: none;
+    border: 1px solid $text-color;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    color: $text-color;
+  }
 
-	.date {
-		color: $light-dark;
-		font-size: 15px;
-	}
+  .date {
+    color: $light-dark;
+    font-size: 15px;
+  }
 }
 
 .footer-button {
-	@include flex(center, center, row);
+  @include flex(center, center, row);
 
   background-color: $btn-color;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	height: 12vh;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 12vh;
 
-	a {
-		border: 2px solid $white;
-		border-radius: 4px;
-		padding: 5% 20%;
-		color: $white;
-		font-size: 18px;
-	}
+  a {
+    border: 2px solid $white;
+    border-radius: 4px;
+    padding: 5% 20%;
+    color: $white;
+    font-size: 18px;
+  }
 }
 
 .sub_heading {
-	@include flex(center, space-between, row);
+  @include flex(center, space-between, row);
 
-	height: 30px;
-	padding: 15px;
-	box-shadow: $shadow;
-	background-color: $white;
-	font-weight: 600;
+  height: 30px;
+  padding: 15px;
+  box-shadow: $shadow;
+  background-color: $white;
+  font-weight: 600;
 
-	:first-child {
-		color: $light-dark;
-	}
+  :first-child {
+    color: $light-dark;
+  }
 }
-
