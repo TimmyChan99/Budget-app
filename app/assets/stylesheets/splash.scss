@@ -1,0 +1,44 @@
+@import './page.scss';
+
+.splash_screen {
+	background-color: #f0f2f1;
+	height: 100vh;
+
+	h1 {
+		font-family: 'Odibee Sans', 'cursive';
+		color: $primary-color;
+		font-size: 3em;
+		position: fixed;
+		left: 22%;
+		top: 30%
+	}
+
+	span {
+		color: $text-color;
+	}
+
+	div {
+		@include flex(center, center, column);
+
+		position: fixed;
+		bottom: 6%;
+		left: 50%;
+		right: 50%;
+   
+		a {
+			background: $primary-color;
+			width: 80vw;
+			padding: 20px;
+	    margin: 10px;
+			text-align: center;
+			color: $white;
+			text-transform: uppercase;
+			font-weight: 600;
+		}
+
+		:last-child {
+			color: $light-dark;
+			background: none;
+		}
+	}
+}
