@@ -1,5 +1,13 @@
 @import './page.scss';
 
+@mixin message($bg, $color) {
+	text-align: center;
+	background-color: $bg;
+	color: $color;
+	padding: 10px;
+	font-weight: 500;
+}
+
 header {
 	@include bg-gradiant;
   @include flex(center, flex-start, row);
@@ -20,4 +28,12 @@ header {
 		font-size: 15px;
 		font-weight: 600;
 	}
+}
+
+.notice {
+	@include message(#d1e7dd, #0f5132)
+}
+
+.alert {
+	@include message(#f8d7da, #842029)
 }
