@@ -4,6 +4,7 @@ $white: #fff;
 $bg-color: #f1f1f1;
 $btn-color: #60b524;
 $text-color: #434b54;
+$light-dark: #989da3;
 $shadow:  rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
 @mixin flex($align, $justify, $direction) {
@@ -90,7 +91,7 @@ padding: 5px;
 	}
 
 	.date {
-		color: #989da3;
+		color: $light-dark;
 		font-size: 15px;
 	}
 }
@@ -124,7 +125,7 @@ padding: 5px;
 	font-weight: 600;
 
 	:first-child {
-		color: #989da3;
+		color: $light-dark;
 	}
 }
 

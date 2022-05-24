@@ -1,21 +1,20 @@
-<h1>Add a new category</h1>
-
-<%= form_with model: @category, method: :post, url: user_groups_path(current_user), scope: :category do |f| %>
-
-
-	<div>
-	  <%= f.label :name %><br>
-	   <%= f.text_field :name %>
-	</div>
-
-	<div>
-	  <%= f.label :icon %><br>
-	   <%= f.url_field :icon %>
-	</div>
-		
-	<div>
-		<%= f.submit "Save" %>
-	</div>
-<% end %>
-
 <%= link_to 'Back', authenticated_root_path%>
+
+<div class='main'>
+	<h1 class='heading'>Add a new category</h1>
+
+	<%= form_with model: @category, method: :post, url: user_groups_path(current_user), scope: :category, class: 'form' do |f| %>
+
+		<div class='field-container'>
+			 <%= f.text_field :name,  placeholder: "Category Name", class: 'field' %>
+		</div>
+	
+		<div class='field-container'>
+			 <%= f.url_field :icon,  placeholder: 'Icon URL', class: 'field' %>
+		</div>
+			
+		<div>
+			<%= f.submit "Save" %>
+		</div>
+	<% end %>
+</div>
