@@ -1,0 +1,23 @@
+@import './page.scss';
+
+header {
+	@include bg-gradiant;
+  @include flex(center, flex-start, row);
+	
+	background: linear-gradient(180deg, rgba(45,97,155,1) 0%, rgba(50,108,174,1) 35%, rgba(55,120,194,1) 100%);
+  padding: 7px;
+	height: 30px;
+	color: $white;
+
+	.back_btn {
+		color: $white;
+	}
+
+	button {
+		color: $white;
+		background: none;
+		border: none;
+		font-size: 15px;
+		font-weight: 600;
+	}
+}
