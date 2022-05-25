@@ -6,7 +6,7 @@ RSpec.feature 'Login page', type: :feature do
     visit user_session_path
   end
 
-  it 'can enter a name and receive a greeting' do
+  it 'Should have login button' do
     expect(page).to have_content 'Log in'
   end
 
@@ -19,14 +19,14 @@ RSpec.feature 'Login page', type: :feature do
     expect(page).to have_content 'Invalid Email or password.'
   end
 
-  it 'click the login error' do
+  it 'Should login successfully' do
     fill_in 'Email', with: 'user@example.com'
     fill_in 'Password', with: 'password'
     click_button 'Log in'
     expect(page).to have_content 'Signed in successfully.'
   end
 
-  it 'Login successfully' do
+  it 'Login successfully should rediret to home page' do
     fill_in 'Email', with: 'user@example.com'
     fill_in 'Password', with: 'password'
     click_button 'Log in'
