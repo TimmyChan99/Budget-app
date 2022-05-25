@@ -15,5 +15,4 @@ RSpec.describe User, type: :model do
     subject.name = 'Rida'
     expect(subject).to be_valid
   end
-
 end

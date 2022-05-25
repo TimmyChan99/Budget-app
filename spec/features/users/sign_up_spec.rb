@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.feature 'Signup', type: :feature do
-
   it 'Should not sign up with empty fields' do
     visit new_user_registration_path
     click_button 'Sign up'
@@ -18,12 +17,12 @@ RSpec.feature 'Signup', type: :feature do
   end
 
   it 'click the login error' do
-  visit new_user_registration_path
-  fill_in 'Full Name', with: 'Hello'
-  fill_in 'Email', with: 'ali@example.com'
-  fill_in 'Password', with: 'password'
-  fill_in 'Password Confirm', with: 'password'
-  click_button 'Sign up'
-  expect(page).to have_content 'You have signed up successfully.'
+    visit new_user_registration_path
+    fill_in 'Full Name', with: 'Hello'
+    fill_in 'Email', with: 'ali@example.com'
+    fill_in 'Password', with: 'password'
+    fill_in 'Password Confirm', with: 'password'
+    click_button 'Sign up'
+    expect(page).to have_content 'You have signed up successfully.'
   end
 end

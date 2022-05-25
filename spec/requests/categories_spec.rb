@@ -5,7 +5,8 @@ RSpec.describe 'Categories', type: :request do
 
   let(:user) { User.create(name: 'Cork', email: 'example@mail.com', password: 'password') }
   let(:category) do
-    Group.create(id: 1, name: 'Food', icon: 'https://cdn-icons-png.flaticon.com/512/5141/5141534.png', author_id: user.id )
+    Group.create(id: 1, name: 'Food', icon: 'https://cdn-icons-png.flaticon.com/512/5141/5141534.png',
+                 author_id: user.id)
   end
 
   describe 'Test Get categories#index' do
