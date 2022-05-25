@@ -17,7 +17,7 @@ class EntitiesController < ApplicationController
       redirect_to user_group_path(current_user, permitted[:group_id])
     else
       flash[:alert] = 'Error: Could not create a transaction'
-      render :new
+      redirect_to new_entity_path
     end
   end
 
