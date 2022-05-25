@@ -30,6 +30,6 @@ RSpec.feature 'Login page', type: :feature do
     fill_in 'Email', with: 'user@example.com'
     fill_in 'Password', with: 'password'
     click_button 'Log in'
-    expect(page).to have_current_path(authenticated_root_path)
+    expect(page).to have_current_path new_user_group_path
   end
 end
