@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'My Budget app', type: :feature do
 
-  describe 'Show page (list of transactions)' do
+  describe 'Create a new category page' do
 
     before :each do
 		 @user =	User.create(id: 1, name: 'user', email: 'user@example.com', password: 'password')
