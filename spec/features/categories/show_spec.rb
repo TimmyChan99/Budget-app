@@ -49,8 +49,6 @@ RSpec.describe 'My Budget app', type: :feature do
     it 'Should have the category name' do 
       expect(page).to have_content @clothing.name.capitalize
     end
-
-    
-    
+  
   end
 end
