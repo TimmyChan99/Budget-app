@@ -1,4 +1,6 @@
 class EntitiesController < ApplicationController
+  before_action :authenticate_user!
+
   def new
     @transaction = Entity.new
     @purchases = Purchase.new
