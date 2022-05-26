@@ -1,0 +1,21 @@
+<header>
+	<%= button_to 'sign out', destroy_user_session_path, method: :delete %>
+</header>
+<div class='main'>
+	<h1 class='heading'>Categories</h1>	
+	<ul class='categories_list'>
+		<% @categories.each do |category| %>
+		 <li class='category'>
+			 <%= image_tag category.icon, alt: 'icon'%> 
+			 <div>
+				 <%= link_to category.name.capitalize, user_group_path(current_user, category)%>
+				 <p><span> $</span><%= category.purchases.sum { |item| item.entity.amount } %></p>
+			 </div>
+			 <%= button_to 'Delete', user_group_path(current_user, category), method: :delete %>
+		 </li>
+		<% end %>
+	</ul>
+	<div class="footer-button">
+		<%= link_to 'Add a new category', new_user_group_path(current_user) %>
+	</div>
+</div>
