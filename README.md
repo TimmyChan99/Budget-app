@@ -78,7 +78,7 @@ To get a local copy up and running follow these simple example steps:
 - Run `rails db:create` and `rails db:migrate` to set up the database
 - Run `bundle exec rspec` to run tests
 
-## Demo Link
+## Live Version
 
 [Live Demo link](https://mybudget-railsapp.herokuapp.com/)
 
