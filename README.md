@@ -7,6 +7,12 @@ The myBudget app is a Ruby on Rails application that allows the user to:
 - introduce new transactions associated with a category.
 - see the money spent on each category.
 
+## Demo 
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/92228303/176455799-8bdbd901-46a3-4de6-984f-a8ce7d8d4f95.gif" alt="Splash screen" />
+</p>
+
 ## Interactions
 
 ### Splash screen
